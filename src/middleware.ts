@@ -12,4 +12,4 @@ export default withAuth(
     }
   )
 
-export const config = { matcher: ["/dashboard"] }
+export const config = { matcher: ["/login"] }
