@@ -1,31 +1,29 @@
-"Use Client";
+'Use Client';
 import React from "react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="w-full py-12">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-          <div className="flex flex-col justify-center space-y-2 md:w-1/2">
-            <h1 className="text-6xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none p-7">
-              Empower Your Creativity with Us
-            </h1>
-            <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400 p-7">
-              Unlock your full creative potential with our innovative platform.
-              Whether you are a beginner or a professional, we have the tools to
-              help you succeed.
-            </p>
-          </div>
-          <div className=" mx-16 md:w-1/2">
-          <Link href="/chatbots">
-            <Button className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300">
-              Try for Free
-            </Button>
-            </Link>
-          </div>
+    <section className="bg-white">
+      <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div className="mr-auto place-self-center lg:col-span-7">
+          <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-black">
+            Generative AI-powered customer support
+          </h1>
+          <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            In less than four minutes, automate customer service on your website
+            with a bespoke ChatGPT-like bot. Your customer service bot needs no
+            maintenance or training, and it will handle requests and escalate
+            them to an agent if necessary.
+          </p>
+          <a
+            href="/chatbots"
+            className="inline-flex h-10 items-center justify-center text-white rounded-md bg-gray-900 px-8 text-sm font-medium shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
+          >
+            Get started
+          </a>
         </div>
+        {/* Image section removed */}
       </div>
     </section>
   );
