@@ -12,4 +12,4 @@ export default withAuth(
     }
   )
 
-export const config = { matcher: ["/chatbots"] }
+export const config = { matcher: ["/login"] }
