@@ -11,7 +11,7 @@ const Navbar = () => {
         <div>
           <Link
             className="group inline-flex items-center rounded-md px-4 py-2 text-sm hover:bg-slate-300"
-            href="/integration"
+            href="/integrations"
           >
             Integrations
           </Link>
