@@ -1,6 +1,6 @@
 "Use Client";
 import React from "react";
-import { BsHouseDoor, BsRobot, BsDatabase } from "react-icons/bs";
+import { BsHouseDoor, BsRobot, BsDatabase, BsGearFill } from "react-icons/bs";
 import { CiInboxIn, CiPen } from "react-icons/ci";
 import { LuMousePointerClick, LuComponent } from "react-icons/lu";
 import Link from "next/link";
@@ -24,6 +24,7 @@ const Sidebar = () => {
             { href: "/tool", icon: <CiPen />, text: "Tools" },
             { href: "/widgets", icon: <LuMousePointerClick />, text: "Widgets" },
             { href: "/integrations ", icon: <LuComponent />, text: "Integrations" },
+            { href: "/settings", icon: <BsGearFill />, text: "Settings" },
           ].map((link) => (
             <Link href={link.href} key={link.text}>
               <div className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:bg-gray-300 ">

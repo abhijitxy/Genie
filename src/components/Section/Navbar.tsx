@@ -7,6 +7,7 @@ const Navbar = () => {
       key="1"
       className="flex h-20 w-full shrink-0 items-center px-4 md:px-6"
     >
+      <div className="text-3xl text-left-top">GENIE</div>
       <div className="ml-auto flex gap-2">
         <div>
           <Link
@@ -17,7 +18,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="inline-flex h-10 items-center justify-center text-white rounded-md bg-gray-900 px-8 text-sm font-medium shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50">
-          <a href="/chatbots">Login</a>
+          <Link href={"/chatbots"}>Login</Link>
         </div>
       </div>
     </header>
