@@ -1,9 +1,15 @@
-export default function Page () {
+import Link from "next/link";
+
+export default function Component() {
     return (
-        <main>
-            <div className="flex flex-col items-center justify-between ">
-            Chatbots
-            </div>
-        </main>
-    )
-}
+      <main className="flex flex-col items-center justify-between">
+        <div>
+        <Link href="/chatbots/create">  
+           chatbot
+           </Link>
+        </div>   
+      </main>
+    );
+  }
+  
+
