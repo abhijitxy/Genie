@@ -1,3 +1,6 @@
+"use client";
+import Link from "next/link";
+
 export default function Component() {
     return (
       <main className="flex flex-col items-center justify-center min-h-screen py-12 bg-gray-50">
@@ -74,9 +77,11 @@ export default function Component() {
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-gray-900"
                 />
               </div>
+              <Link href="/api/chat">
               <button className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-900 focus:outline-none focus:ring">
                 Create Chatbot Widget Access
               </button>
+              </Link>
             </div>
           </div>
         </div>
