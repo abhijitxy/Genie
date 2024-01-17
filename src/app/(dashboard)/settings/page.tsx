@@ -1,7 +1,7 @@
-export default function page () {
-    return (
-        <div className="text-center py-7">
-            <h1>Settings</h1>
-        </div>
-    )
-}
+import { UserProfile } from "@clerk/nextjs";
+ 
+const UserProfilePage = () => (
+  <UserProfile path="/user-profile" routing="path" />
+);
+ 
+export default UserProfilePage;
