@@ -1,10 +1,11 @@
+import { NextResponse,NextRequest } from 'next/server';
 import { OpenAI } from 'openai';
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
 });
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
     try {
         const completion = await openai.chat.completions.create({
             messages: [
@@ -18,11 +19,11 @@ export async function POST(request: Request) {
 
         console.log(completion.choices[0]);
 
-        return new Response(JSON.stringify(completion.choices[0]), {
+        return new NextResponse(JSON.stringify(completion.choices[0]), {
             headers: { 'Content-Type': 'application/json' },
         });
     } catch (error) {
         console.error(error);
-        return new Response('Internal Server Error', { status: 500 });
+        return new NextResponse('Internal Server Error', { status: 500 });
     }
 }

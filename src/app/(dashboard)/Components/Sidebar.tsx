@@ -1,7 +1,6 @@
 "Use Client";
 import React from "react";
 import { BsHouseDoor, BsRobot, BsDatabase, BsGearFill } from "react-icons/bs";
-import { CiPen } from "react-icons/ci";
 import { LuMousePointerClick, LuComponent } from "react-icons/lu";
 import Link from "next/link";
 
@@ -9,7 +8,7 @@ const Sidebar = () => {
   return (
     <div className="lg:w-64 w-full h-screen bg-gray-100 border-r overflow-y-auto shadow-md">
       <div className="flex flex-col p-6">
-        <Link href="/">
+        <Link href="">
           <div className="flex items-center gap-2 font-semibold text-xl text-gray-800 hover:text-blue-500 dark:hover:text-blue-300">
             <BsHouseDoor className="h-6 w-6" />
             <span>Dashboard</span>
@@ -20,7 +19,6 @@ const Sidebar = () => {
           {[
             { href: "/chatbots", icon: <BsRobot />, text: "Chatbots" },
             { href: "/datasource", icon: <BsDatabase />, text: "Data Sources" },
-            { href: "/tool", icon: <CiPen />, text: "Tools" },
             {
               href: "/widgets",
               icon: <LuMousePointerClick />,
