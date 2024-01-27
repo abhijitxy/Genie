@@ -1,29 +1,34 @@
-import { NextResponse,NextRequest } from 'next/server';
-import { OpenAI } from 'openai';
+import OpenAI from "openai";
+import { OpenAIStream, StreamingTextResponse } from "ai";
+import { NextResponse } from "next/server";
 
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
-export async function POST(request: NextRequest) {
-    try {
-        const completion = await openai.chat.completions.create({
-            messages: [
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": "Who won the World Series in 2020?"},
-                {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
-                {"role": "user", "content": "Where was it played?"}
-            ],
-            model: "gpt-3.5-turbo",
-        });
+export const runtime = "edge";
 
-        console.log(completion.choices[0]);
+export async function POST(req: Request) {
+  // Wrap with a try/catch to handle API errors
+  try {
+    const { messages } = await req.json();
 
-        return new NextResponse(JSON.stringify(completion.choices[0]), {
-            headers: { 'Content-Type': 'application/json' },
-        });
-    } catch (error) {
-        console.error(error);
-        return new NextResponse('Internal Server Error', { status: 500 });
+    const response = await openai.chat.completions.create({
+      model: "gpt-3.5-turbo-1106",
+      stream: true,
+      messages,
+    });
+
+    const stream = OpenAIStream(response);
+
+    return new StreamingTextResponse(stream);
+  } catch (error) {
+    // Check if the error is an APIError
+    if (error instanceof OpenAI.APIError) {
+      const { name, status, headers, message } = error;
+      return NextResponse.json({ name, status, headers, message }, { status });
+    } else {
+      throw error;
     }
+  }
 }
