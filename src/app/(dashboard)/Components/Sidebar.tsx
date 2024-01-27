@@ -1,8 +1,9 @@
 "Use Client";
 import React from "react";
-import { BsHouseDoor, BsRobot, BsDatabase, BsGearFill } from "react-icons/bs";
-import { LuMousePointerClick, LuComponent } from "react-icons/lu";
+import { BsHouseDoor, BsRobot, BsDatabase } from "react-icons/bs";
+import { LuMousePointerClick, LuComponent, LuLogOut } from "react-icons/lu";
 import Link from "next/link";
+import { SignOutButton } from "@clerk/nextjs";
 
 const Sidebar = () => {
   return (
@@ -29,7 +30,6 @@ const Sidebar = () => {
               icon: <LuComponent />,
               text: "Integrations",
             },
-            { href: "/settings", icon: <BsGearFill />, text: "Settings" },
           ].map((link) => (
             <Link href={link.href} key={link.text}>
               <div className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:bg-gray-300 ">
@@ -40,6 +40,12 @@ const Sidebar = () => {
             </Link>
           ))}
         </nav>
+        <div className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:bg-gray-300">
+          <LuLogOut />
+          <Link href={"/"}>
+            <SignOutButton />
+          </Link>
+        </div>
       </div>
     </div>
   );
