@@ -1,8 +1,7 @@
-"use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
-const chatbot = () => {
+const Chatbot = () => {
   // State to store the input values
   const [chatbotName, setChatbotName] = useState("");
   const [chatbotDescription, setChatbotDescription] = useState("");
@@ -67,4 +66,4 @@ const chatbot = () => {
   );
 };
 
-export default chatbot;
+export default Chatbot;
