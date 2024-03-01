@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# About Project
 
-## Getting Started
+Welcome to Genie, your one-stop solution for revolutionizing customer support on your website! In less than four minutes, you can automate your customer service with a bespoke ChatGPT-like bot, providing a seamless and efficient experience for your users.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **[Typescript](https://www.typescriptlang.org/)** - Language
+- **[Next.js](https://nextjs.org/)** - framework 
+- **[Tailwind CSS](https://tailwindcss.com/)** - CSS
+- **[Clerk](https://clerk.com/)** - authentication 
+- **[Vercel](https://vercel.com/)** - hosting
+- **[OpenAI](https://openai.com/)** - AI
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Requirements
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To run Genie locally, you will need:
 
-## Learn More
+- **Node.js**: Ensure that Node.js is installed on your machine.
 
-To learn more about Next.js, take a look at the following resources:
+### Setup Instructions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Fork this repository to your GitHub account.**
+2. **Clone the repository to your local device:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```bash
+    git clone https://github.com/<your-username>/Genie
+    ```
 
-## Deploy on Vercel
+3. **Install dependencies in the root directory:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. **Create your `.env` file from the `.env.example`. You can use:**
+
+    ```bash
+    cp .env.example .env
+    ```
+
+   Replace the placeholder values with your specific configurations.
+
+5. **Set the following environment variables in the `.env` file:**
+6. 
+    - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
+    - `CLERK_SECRET_KEY`
+    - `OPENAI_API_KEY`
+
+7. **Run the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+8. **Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.**
+
+ Your feedback and contributions are always welcome. Happy coding! 
+ Follow us on [Twitter](https://twitter.com/Abhijitroy_dev) for updates. :)
