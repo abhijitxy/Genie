@@ -8,7 +8,7 @@ const Footer = () => {
           href="https://github.com/Abhijit20112003"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl text-black hover:text-gray-400" // Set icon color to black
+          className="text-2xl text-white hover:text-gray-400" // Set icon color to black
         >
           <AiFillGithub />
         </a>
@@ -16,7 +16,7 @@ const Footer = () => {
           href="https://twitter.com/Abhijitroy_dev"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl text-black hover:text-gray-400" // Set icon color to black
+          className="text-2xl text-white hover:text-gray-400" // Set icon color to black
         >
           <AiOutlineTwitter />
         </a>

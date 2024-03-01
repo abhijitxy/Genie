@@ -9,7 +9,6 @@ const openai = new OpenAI({
 export const runtime = "edge";
 
 export async function POST(req: Request) {
-  // Wrap with a try/catch to handle API errors
   try {
     const { messages } = await req.json();
 

@@ -1,38 +1,18 @@
 "use client";
+import Bot from "../Components/bot";
+import Link from "next/link";
 
-import { useChat } from "ai/react";
-
-export default function Chat() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat();
-
+export default function Page() {
   return (
-    <div className=" h-screen flex flex-col w-full max-w-md py-24 mx-auto stretch h-dvh">
-      {messages.length > 0
-        ? messages.map((m) => (
-            <div key={m.id} className="whitespace-pre-wrap">
-              {m.role === "user" ? "User: " : "AI: "}
-              {m.content}
-            </div>
-          ))
-        : null}
-
-      <form
-        onSubmit={(e) => {
-          handleSubmit(e, {
-            data: {
-              imageUrl:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Field_sparrow_in_CP_%2841484%29_%28cropped%29.jpg/733px-Field_sparrow_in_CP_%2841484%29_%28cropped%29.jpg",
-            },
-          });
-        }}
-      >
-        <input
-          className="fixed bottom-0 w-full max-w-md p-2 mb-8 border border-gray-300 rounded shadow-xl"
-          value={input}
-          placeholder="What does the image show..."
-          onChange={handleInputChange}
-        />
-      </form>
-    </div>
+    <main className="flex flex-col items-center justify-between">
+      <div className="py-8 ml-auto mr-6">
+        <Link href="/integrations">
+          <div className="inline-flex h-10 items-center justify-center text-white rounded-md bg-gray-900 px-8 text-sm font-medium shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-gray-950">
+            Enable on site
+          </div>
+        </Link>
+      </div>
+      <Bot/>
+    </main>
   );
 }
