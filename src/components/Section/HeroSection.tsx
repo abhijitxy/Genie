@@ -2,35 +2,37 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="bg-slate-950 flex items-start justify-center h-screen overflow-auto p-4">
-      <div className="text-center max-w-2xl">
-        <h1 className="text-3xl font-medium tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-gray-50 py-2">
-          Generative AI-powered
-          <span className="animate-text-gradient inline-flex bg-gradient-to-r from-neutral-900 via-slate-500 to-neutral-500 bg-[200%_auto] bg-clip-text leading-tight text-transparent dark:from-neutral-100 dark:via-slate-400 dark:to-neutral-400">
-            customer support
-          </span>
-        </h1>
-        <div className="flex justify-center py-2 rounded-md">
+    <section className="bg-white flex items-center justify-center min-h-screen p-4 md:px-8">
+      <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl w-full">
+        <div className="text-left max-w-xl mb-6 md:mb-0">
+          <h1 className="text-5xl font-bold text-gray-800 mb-4">
+            Communicate With Your Customers
+          </h1>
+          <p className="text-gray-600 text-lg mb-6">
+          In under four minutes, you can set up a custom chatbot similar to ChatGPT on your website for customer service. This bot doesn't require any upkeep or training, and it can manage inquiries, even forwarding them to a live agent when needed.
+          </p>
+          <div className="flex space-x-2">
+            <input
+              type="email"
+              placeholder="Enter your mail"
+              className="px-4 py-2 w-64 border rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-300"
+            />
+            <button
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-md transition-colors"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+        <div>
           <Image
-            src="/hero.png"
+            src="/hero1.png"
             alt="Hero Image"
-            width={2500} 
-            height={1500} 
-            objectFit="cover" 
+            width={500}
+            height={400}
+            style={{ objectFit: 'contain' }} 
           />
         </div>
-        <p className="mt-4 mb-6 font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
-          In less than four minutes, automate customer service on your website
-          with a bespoke ChatGPT-like bot. Your customer service bot needs no
-          maintenance or training, and it will handle requests and escalate them
-          to an agent if necessary.
-        </p>
-        <a
-          href="/chatbots"
-          className="inline-flex h-10 items-center justify-center text-black rounded-md bg-white px-8 text-sm font-medium shadow transition-colors hover:text-black hover:bg-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
-        >
-          Get started
-        </a>
       </div>
     </section>
   );
