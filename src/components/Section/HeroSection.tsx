@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="bg-white flex items-center justify-center min-h-screen p-4 md:px-8">
+    <section className="bg-white flex items-center justify-center min-h-screen p-4">
       <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl w-full">
         <div className="text-left max-w-xl mb-6 md:mb-0">
           <h1 className="text-5xl font-bold text-gray-800 mb-4">
@@ -10,7 +10,7 @@ const HeroSection = () => {
           </h1>
           <p className="text-gray-600 text-lg mb-6">
             In under four minutes, you can set up a custom chatbot similar to
-            ChatGPT on your website for customer service. This bot doesn't
+            ChatGPT on your website for customer service. This bot doesn&apos;t
             require any upkeep or training, and it can manage inquiries, even
             forwarding them to a live agent when needed.
           </p>
