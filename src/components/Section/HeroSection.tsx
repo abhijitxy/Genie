@@ -9,7 +9,10 @@ const HeroSection = () => {
             Communicate With Your Customers
           </h1>
           <p className="text-gray-600 text-lg mb-6">
-          In under four minutes, you can set up a custom chatbot similar to ChatGPT on your website for customer service. This bot doesn't require any upkeep or training, and it can manage inquiries, even forwarding them to a live agent when needed.
+            In under four minutes, you can set up a custom chatbot similar to
+            ChatGPT on your website for customer service. This bot doesn't
+            require any upkeep or training, and it can manage inquiries, even
+            forwarding them to a live agent when needed.
           </p>
           <div className="flex space-x-2">
             <input
@@ -17,9 +20,7 @@ const HeroSection = () => {
               placeholder="Enter your mail"
               className="px-4 py-2 w-64 border rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-300"
             />
-            <button
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-md transition-colors"
-            >
+            <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-md transition-colors">
               Get Started
             </button>
           </div>
@@ -30,7 +31,7 @@ const HeroSection = () => {
             alt="Hero Image"
             width={500}
             height={400}
-            style={{ objectFit: 'contain' }} 
+            priority
           />
         </div>
       </div>
