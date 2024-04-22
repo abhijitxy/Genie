@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 export default function Page() {
   const [showCode, setShowCode] = useState(false);
-  const widgetCodeSnippet = `<script src="https://genie-beta.vercel.app/widgets" data-widget-id="${uuidv4()}"></script>`;
+  const widgetCodeSnippet = `<iframe src="https://genie-beta.vercel.app/widgets" height="500" width="300" frameborder="0" name="bot-iframe"></iframe>`;
 
   return (
     <main className="max-w-4xl mx-auto p-4">

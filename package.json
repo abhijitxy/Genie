@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.29.2",
-    "@prisma/client": "^5.5.2",
     "@prisma/extension-accelerate": "^0.6.3",
     "@vercel/analytics": "^1.1.1",
     "ai": "^2.2.31",
