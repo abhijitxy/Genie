@@ -2,11 +2,11 @@
 
 import { useChat } from "ai/react"
 
-const Bot = () => {
+const Embed = () => {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
-    <div className="flex flex-col h-5/6 w-1/4 mx-auto overflow-hidden items-center justify-between bg-white shadow-lg rounded-lg">
+    <div className="flex flex-col h-screen w-full mx-auto overflow-hidden items-center justify-between bg-white shadow-lg rounded-lg">
       <div className="w-full text-left px-4 py-2 bg-black">
         <span className="text-2xl font-bold text-white">GENIE</span>
         <span className="block text-sm text-white opacity-75">Welcome!</span>
@@ -34,4 +34,4 @@ const Bot = () => {
   );
 }
 
-export default Bot;
+export default Embed;

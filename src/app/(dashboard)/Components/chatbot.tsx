@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 const Chatbot = () => {
-  // State to store the input values
   const [chatbotName, setChatbotName] = useState("");
   const [chatbotDescription, setChatbotDescription] = useState("");
-
-  // Function to check if all required fields are filled
   const allFieldsFilled =
     chatbotName.trim() !== "" && chatbotDescription.trim() !== "";
 
