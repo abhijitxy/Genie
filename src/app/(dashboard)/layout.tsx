@@ -8,7 +8,6 @@ export default function DashboardLayout({
     return (
       <section className="grid grid-cols-[256px,1fr] h-screen">
         <Sidebar />
-   
         {children}
       </section>
     )

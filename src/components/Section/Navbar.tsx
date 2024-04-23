@@ -19,7 +19,7 @@ const Navbar = () => {
           </div>
           <a href="/chatbots">
             <div className="inline-flex z-50 h-10 items-center font-semibold justify-center text-white rounded-md bg-green-500 px-6 text-sm shadow transition-colors hover:bg-slate-300 focus-visible:outline-none focus-visible:ring-slate-300">
-              Login
+              Sign Up
             </div>
           </a>
         </div>

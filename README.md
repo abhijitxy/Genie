@@ -10,6 +10,8 @@ Welcome to Genie, your one-stop solution for revolutionizing customer support on
 - **[Clerk](https://clerk.com/)** - authentication 
 - **[Vercel](https://vercel.com/)** - hosting
 - **[OpenAI](https://openai.com/)** - AI
+- **[Prisma](https://www.prisma.io/)** - ORM
+
 
 ## Local Development
 
@@ -47,6 +49,7 @@ To run Genie locally, you will need:
     - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
     - `CLERK_SECRET_KEY`
     - `OPENAI_API_KEY`
+    - `DATABASE_URL`
 
 7. **Run the development server:**
 

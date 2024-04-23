@@ -22,7 +22,6 @@ export async function POST(req: Request) {
 
     return new StreamingTextResponse(stream);
   } catch (error) {
-    // Check if the error is an APIError
     if (error instanceof OpenAI.APIError) {
       const { name, status, headers, message } = error;
       return NextResponse.json({ name, status, headers, message }, { status });

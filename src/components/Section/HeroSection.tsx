@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -20,9 +21,11 @@ const HeroSection = () => {
               placeholder="Enter your mail"
               className="px-4 py-2 w-64 border rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-300"
             />
+            <Link href="/chatbot">
             <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-md transition-colors">
               Get Started
-            </button>
+            </button> 
+            </Link>
           </div>
         </div>
         <div>
