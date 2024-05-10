@@ -1,6 +1,6 @@
 "use client";
-import Bot from "../Components/bot";
 import Link from "next/link";
+import Bot from "../Components/bot";
 
 export default function Page() {
   return (

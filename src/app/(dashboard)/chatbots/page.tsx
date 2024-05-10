@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import Chatbot from "../Components/chatbot";
+import Chat from "../Components/chatbot";
 
 export default function ChatbotPage() {
   const [showChatbot, setShowChatbot] = useState(false);
-
   const toggleChatbot = () => {
     setShowChatbot(!showChatbot);
   };
@@ -23,7 +22,7 @@ export default function ChatbotPage() {
         </div>
       )}
 
-      {showChatbot && <Chatbot />}
+      {showChatbot && <Chat />}
     </main>
   );
 }

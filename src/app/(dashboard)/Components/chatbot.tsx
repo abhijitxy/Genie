@@ -1,7 +1,10 @@
+"use client"
+
+import { Chatbot } from "@/app/action"; 
 import React, { useState } from "react";
 import Link from "next/link";
 
-const Chatbot = () => {
+const Chat = () => {
   const [chatbotName, setChatbotName] = useState("");
   const [chatbotDescription, setChatbotDescription] = useState("");
   const allFieldsFilled =
@@ -10,6 +13,7 @@ const Chatbot = () => {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen py-12 bg-white">
       <div className="w-full max-w-md mx-auto">
+      <form action={Chatbot}>
         <h1 className="text-2xl font-bold text-center mb-6">
           Create a new Chatbot Widget Access
         </h1>
@@ -44,9 +48,9 @@ const Chatbot = () => {
                 className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-gray-900"
                 value={chatbotDescription}
                 onChange={(e) => setChatbotDescription(e.target.value)}
-              ></textarea>
-            </div>
-            <Link href="/widgets">
+                ></textarea>
+              </div> 
+              <Link href="/widgets">
               <button
                 className={`w-full ${
                   allFieldsFilled ? "bg-black hover:bg-gray-900" : "bg-gray-500"
@@ -56,11 +60,12 @@ const Chatbot = () => {
                 Create Chatbot Widget Access
               </button>
             </Link>
-          </div>
+          </div>  
         </div>
+        </form>
       </div>
     </main>
   );
 };
 
-export default Chatbot;
+export default Chat;
