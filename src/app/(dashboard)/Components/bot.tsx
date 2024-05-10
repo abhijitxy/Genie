@@ -4,7 +4,7 @@ import { useChat } from 'ai/react';
 
 import React from 'react'
 
-function bot() {
+function Bot() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
   return (
     <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
@@ -26,4 +26,4 @@ function bot() {
     </div>
   );
 }
-export default bot
+export default Bot
