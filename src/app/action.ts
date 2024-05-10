@@ -17,12 +17,12 @@ export async function continueConversation(messages: CoreMessage[]) {
 }
 
 export async function Chatbot(formData: FormData) {
-  await prisma.chatbot.create({
+  const chatbot = await prisma.chatbot.create({
     data: { 
       name: formData.get('chatbotName') as string,
       description: formData.get('chatbotDescription') as string,
       
     },
   })
-  
+  return chatbot
 }

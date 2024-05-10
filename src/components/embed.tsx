@@ -1,9 +1,10 @@
 "use client";
 
-import { type CoreMessage } from "ai";
-import { useState } from "react";
-import { continueConversation } from "@/app/action";
-import { readStreamableValue } from "ai/rsc";
+
+import { type CoreMessage } from 'ai';
+import { useState } from 'react';
+import { continueConversation } from '@/app/action';
+import { readStreamableValue } from 'ai/rsc';
 
 const Embed = () => {
   const [messages, setMessages] = useState<CoreMessage[]>([]);
