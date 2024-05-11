@@ -1,7 +1,9 @@
+import Embed from "@/components/embed"
+
 export default function chatbotPage(){
     return(
         <div>
-            <h1>Chatbot</h1>
+            <Embed />
         </div>
     )
 }
