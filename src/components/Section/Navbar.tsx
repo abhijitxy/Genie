@@ -1,6 +1,12 @@
+"use client"
+
 import Link from "next/link";
+import { SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
 
 const Navbar = () => {
+
+  const user = useUser();
+ 
   return (
     <>
       <header
@@ -17,12 +23,20 @@ const Navbar = () => {
               Integrations
             </Link>
           </div>
-          <a href="/chatbots">
+          {user.isSignedIn ? (
             <div className="inline-flex z-50 h-10 items-center font-semibold justify-center text-white rounded-md bg-green-500 px-6 text-sm shadow transition-colors hover:bg-slate-300 focus-visible:outline-none focus-visible:ring-slate-300">
-              Sign Up
+              <SignOutButton>
+                SignOut
+              </SignOutButton>
             </div>
-          </a>
-        </div>
+          ) : (
+            <div className="inline-flex z-50 h-10 items-center font-semibold justify-center text-white rounded-md bg-green-500 px-6 text-sm shadow transition-colors hover:bg-slate-300 focus-visible:outline-none focus-visible:ring-slate-300">
+              <SignInButton>
+                SignUp
+              </SignInButton>
+            </div>
+          )}
+          </div>
       </header>
     </>
   );
