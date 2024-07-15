@@ -21,7 +21,7 @@ const Chat = () => {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen py-12 bg-white">
+    <main className="flex flex-col items-center justify-center min-h-screen py-12 ">
       <div className="w-full max-w-md mx-auto">
         <form action={createChatbot} onSubmit={handleSubmit}>
           <h1 className="text-2xl font-bold text-center mb-6">

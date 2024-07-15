@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from "react";
+import { useParams } from "next/navigation"; // Import useParams from next/navigation
 
 export default function Page() {
+  const { id } = useParams(); // Retrieve the dynamic 'id' from the URL
   const [showCode, setShowCode] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
-  const widgetCodeSnippet = `<iframe src="https://genie-beta.vercel.app/chatbot" height="500" width="300" frameborder="0" name="bot-iframe"></iframe>`;
+  const widgetCodeSnippet = `<iframe src="https://genie-beta.vercel.app/chatbot?user=${id}" height="500" width="300" frameborder="0" name="bot-iframe"></iframe>`;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(widgetCodeSnippet)
