@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import { useRouter } from 'next/navigation'; // useRouter from next/navigation
+import { useRouter } from 'next/navigation';
+import { useUser } from '@clerk/nextjs'; // Import useUser from Clerk
 import { findManyChatbots } from "@/app/action";
 import Chat from "../Components/chatbot";
 
-// Define a type for chatbot
 type Chatbot = {
   id: number;
   name: string;
@@ -17,14 +17,17 @@ type Chatbot = {
 export default function ChatbotPage() {
   const [showChatbot, setShowChatbot] = useState(false);
   const [chatbots, setChatbots] = useState<Chatbot[]>([]);
-  const router = useRouter(); // Initialize useRouter from next/navigation
+  const router = useRouter(); 
+  const { user } = useUser(); // Retrieve the user using Clerk
 
   const toggleChatbot = () => {
     setShowChatbot(!showChatbot);
   };
 
-  const handleChatbotClick = (id: number) => {
-    router.push(`/integration/${id}`);
+  const handleChatbotClick = () => {
+    if (user && user.id) {
+      router.push(`/integration/${user.id}`);
+    }
   };
 
   useEffect(() => {
@@ -61,7 +64,7 @@ export default function ChatbotPage() {
             <li
               key={chatbot.id}
               className="border border-gray-950 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
-              onClick={() => handleChatbotClick(chatbot.id)}
+              onClick={handleChatbotClick} // Redirection using Clerk userId
             >
               <h2 className="text-lg font-medium">{chatbot.name}</h2>
               <p className="text-sm text-gray-600">{chatbot.description}</p>
