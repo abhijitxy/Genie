@@ -9,3 +9,8 @@ export async function createChatbot(formData: FormData) {
     data: { name, description },
   });
 }
+
+export async function findManyChatbots() {
+  const chatbots = await prisma.chatbot.findMany();
+  return chatbots;
+}
